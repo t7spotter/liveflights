@@ -6,7 +6,7 @@ import json
 
 app = Flask(__name__)
 
-@app.route("/<reg>")
+@app.route("/reg/<reg>")
 def reg(reg):
     response = requests.get(f"https://www.jetphotos.com/api/json/lastseen.php?reg={reg}")
     response_json = response.json()
