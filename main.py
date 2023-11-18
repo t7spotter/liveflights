@@ -112,3 +112,7 @@ def bound(zone):
     
     result_zip = list(zip(info_reg, flights_details_in_specific_bound))
     return result_zip
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
