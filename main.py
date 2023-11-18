@@ -81,7 +81,6 @@ def bound(zone):
     data_dict.pop('stats', None)
     data_dict.pop('version', None)
     
-    ic(list(keys_of_dict))
 
     result = []
     result_reg = []
