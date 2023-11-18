@@ -113,5 +113,19 @@ def bound(zone):
     return result_zip
 
 
+
+@app.route('/weather/<iata>')
+def weather(iata):
+    response = http.client.HTTPSConnection("api.flightradar24.com")
+    response.request("GET", f"/common/v1/airport.json?code={iata}")
+    res = response.getresponse()
+    data = res.read()
+    data_dict = json.loads(data)
+    
+    weather = data_dict['result']['response']['airport']['pluginData']['weather']
+    return weather
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
