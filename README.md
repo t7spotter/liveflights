@@ -55,7 +55,8 @@ This small web application, built with Flask, enables users to send requests in 
 ```
 ### Retrieve Aircraft Information by Registration (Endpoint: /reg/<Aircraft_registration>):
 
-   By entering the aircraft registration, you can retrieve the following information:
+By entering the aircraft registration, you can retrieve the following information:
+
 Example:
     'url:  http://your-host/reg/A7-ALW`
 
