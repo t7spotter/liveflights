@@ -16,16 +16,16 @@ This small web application, built with Flask, enables users to send requests in 
 
    Example:
     
-    For example, in the image below, we want to track active flights in the sky over the city of Los Angeles. We define two points to specify the desired area (i.e., the green box), marked by the red dots.
+    For example, in the image below, we want to track active flights in the sky over the Emirates. We define two points to specify the desired area (i.e., the green box), marked by the red dots.
 
     Each point has x and y, and you can specify them for any desired area. Enter these two points in the format x1, x2, y1, y2 at the end of the URL after `/zone/<x1,x2,y1,y2>`. Then, receive the response in `JSON` format.
 
 
-    ![Los Angeles zone](https://github.com/t7spotter/liveflights/blob/main/images/LA%20bounds.png)
+    ![Emirates zone]()
 
     In this case, each red dot represents a coordinate point (x, y), and the green box represents the specified zone of interest. You can use the x1, x2, y1, y2 values for any desired points or areas you want to track.
 
-       `url:  http://your-host/zone/33.61,34.26,-117.10,-118.63`
+       `url:  http://your-host/zone/25.930446,23.992521,53.807891,56.809364`
     
 ### Retrieve Aircraft Information by Registration (Endpoint: /reg/<Aircraft_registration>):
 
