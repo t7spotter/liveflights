@@ -76,11 +76,12 @@ def bound(zone):
     data_dict = json.loads(data)
     
     keys_of_dict = data_dict.keys()
-    list_keys_of_dict = list(keys_of_dict)
     
     data_dict.pop('full_count', None)
     data_dict.pop('stats', None)
     data_dict.pop('version', None)
+    
+    list_keys_of_dict = list(keys_of_dict)
     
     def fetch_zone():
         url_bound = str(request)
