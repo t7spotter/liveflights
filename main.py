@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from icecream import ic
 import requests
 import http.client
@@ -81,6 +81,21 @@ def bound(zone):
     data_dict.pop('stats', None)
     data_dict.pop('version', None)
     
+    def fetch_zone():
+        url_bound = str(request)
+    
+        start_index = url_bound.find('/zone/') + len('/zone/')
+        end_index = url_bound.find("'", start_index)
+
+        coordinates_str = url_bound[start_index:end_index]
+        coordinates = [float(coord) for coord in coordinates_str.split(',')]
+        json_cordinate = {
+            "x1": coordinates[0],
+            "y1": coordinates[2],
+            "x2": coordinates[1],
+            "y2": coordinates[3],
+        }
+        return json_cordinate
 
     result = []
     result_reg = []
