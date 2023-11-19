@@ -21,7 +21,7 @@ This small web application, built with Flask, enables users to send requests in 
     Each point has x and y, and you can specify them for any desired area. Enter these two points in the format x1, x2, y1, y2 at the end of the URL after `/zone/<x1,x2,y1,y2>`. Then, receive the response in `JSON` format.
 
 
-    ![Emirates zone]()
+    ![Emirates zone](https://github.com/t7spotter/liveflights/blob/main/images/UAE.png)
 
     In this case, each red dot represents a coordinate point (x, y), and the green box represents the specified zone of interest. You can use the x1, x2, y1, y2 values for any desired points or areas you want to track.
 
