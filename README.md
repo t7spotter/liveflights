@@ -25,6 +25,32 @@ This small web application, built with Flask, enables users to send requests in 
 
     In this case, each red dot represents a coordinate point (x, y), and the green box represents the specified zone of interest. You can use the x1, x2, y1, y2 values for any desired points or areas you want to track.
 
-        http://your-host/zone/33.61,34.26,-117.10,-118.63
+       `url:  http://your-host/zone/33.61,34.26,-117.10,-118.63`
     
+### Retrieve Aircraft Information by Registration (Endpoint: /reg/<reg>):
+
+    By entering the aircraft registration, you can retrieve the following information:
+Example:
+    'url:  http://your-host/reg/A7-ALW`
+Response:
+    Image:
+        Copyright: Lorenz Kafenda
+        Source (src): https://cdn.jetphotos.com/640cb/6/1943448_1698860351.jpg?v=0
+
+    Aircraft Info:
+        Airline: Qatar Airways
+        Country: Qatar
+        Model: Airbus A350-941
+        Registration: A7-ALW
+    Flight Info:
+        Flight Number: QR1370
+        From: Cape Town International Airport [CPT]
+        Is Live: True
+        To: Doha Hamad International Airport [DOH]
+
+This information includes details about the aircraft's image, copyright, airline, country, model, registration, flight number, departure airport (From), live status, and arrival airport (To).
+
+
+
+
 
