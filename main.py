@@ -10,6 +10,7 @@ app = Flask(__name__)
 def reg(reg):
     response = requests.get(f"https://www.jetphotos.com/api/json/lastseen.php?reg={reg}")
     response_json = response.json()
+    
     result = response_json["result"]["response"]
     aircraft_info = result['aircraftInfo']
     flight_info = result['data']
@@ -39,16 +40,35 @@ def reg(reg):
     except:
         To = "Not available"
 
+    
+    try:        
+        Registration = aircraft_info['airline']['name']
+    except:
+        Registration = "Not available"
 
+    try:        
+        Airline = aircraft_info['registration']
+    except:
+        Airline = "Not available"
+    
+    try:        
+        Model = aircraft_info['model']['text']
+    except:
+        Model = "Not available"
+    
+    try:        
+        Country = aircraft_info['country']['name']
+    except:
+        Country = "Not available"
     
     final_response = {
         "Image": image,
         "Index": indexx,
         "aircraft info":{
-            "Registration":aircraft_info['registration'],
-            "Airline": aircraft_info['airline']['name'],
-            "Model": aircraft_info['model']['text'],
-            "Country": aircraft_info['country']['name'],
+            "Registration":Registration,
+            "Airline": Airline,
+            "Model": Model,
+            "Country": Country,
         },
         "flight info": {
             "Is live": flight_info[indexx]['status']['live'],
