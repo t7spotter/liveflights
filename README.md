@@ -17,4 +17,4 @@ This small web application, built with Flask, enables users to send requests in 
    Example:
     http://your-host/zone/36.5,33.68,49.2,54.43
 
- /LA bounds.png
+/LA bounds.png
