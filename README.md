@@ -32,7 +32,8 @@ This small web application, built with Flask, enables users to send requests in 
     By entering the aircraft registration, you can retrieve the following information:
 Example:
     'url:  http://your-host/reg/A7-ALW`
-Response:
+
+```Response:
     Image:
         Copyright: Lorenz Kafenda
         Source (src): https://cdn.jetphotos.com/640cb/6/1943448_1698860351.jpg?v=0
@@ -45,7 +46,7 @@ Response:
         Flight Number: QR1370
         From: Cape Town International Airport [CPT]
         Is Live: True
-        To: Doha Hamad International Airport [DOH]
+        To: Doha Hamad International Airport [DOH]```
 
 This information includes details about the aircraft's image, copyright, airline, country, model, registration, flight number, departure airport (From), live status, and arrival airport (To).
 
