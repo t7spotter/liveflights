@@ -103,6 +103,8 @@ def bound(zone):
     
     list_keys_of_dict = list(keys_of_dict)
     
+    ic(list_keys_of_dict) #for logging
+    
     def fetch_zone():
         url_bound = str(request)
     
