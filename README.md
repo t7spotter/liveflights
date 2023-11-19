@@ -27,7 +27,7 @@ This small web application, built with Flask, enables users to send requests in 
 
        `url:  http://your-host/zone/33.61,34.26,-117.10,-118.63`
     
-### Retrieve Aircraft Information by Registration (Endpoint: /reg/<reg>):
+### Retrieve Aircraft Information by Registration (Endpoint: /reg/<Aircraft_registration>):
 
     By entering the aircraft registration, you can retrieve the following information:
 Example:
