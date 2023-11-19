@@ -114,10 +114,11 @@ def bound(zone):
         coordinates_str = url_bound[start_index:end_index]
         coordinates = [float(coord) for coord in coordinates_str.split(',')]
         json_cordinate = {
-            "x1": coordinates[0],
-            "y1": coordinates[2],
-            "x2": coordinates[1],
-            "y2": coordinates[3],
+            "1 x": coordinates[0],
+            "1 y": coordinates[2],
+            "2 x": coordinates[1],
+            "2 y": coordinates[3],
+            "Cordinates" : f"{coordinates[0]}, {coordinates[2]} & {coordinates[1]}, {coordinates[3]}"
         }
         return json_cordinate
 
