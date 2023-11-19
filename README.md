@@ -36,7 +36,6 @@ Response:
     Image:
         Copyright: Lorenz Kafenda
         Source (src): https://cdn.jetphotos.com/640cb/6/1943448_1698860351.jpg?v=0
-
     Aircraft Info:
         Airline: Qatar Airways
         Country: Qatar
