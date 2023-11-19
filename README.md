@@ -15,7 +15,16 @@ This small web application, built with Flask, enables users to send requests in 
 1. Make a GET request to the `/zone/<zone>` endpoint, where `<zone>` represents the coordinates of two corners of a rectangle (e.g., `x1,x2,y1,y2`).
 
    Example:
-    http://your-host/zone/36.5,33.68,49.2,54.43
+    
+    For example, in the image below, we want to track active flights in the sky over the city of Los Angeles. We define two points to specify the desired area (i.e., the green box), marked by the red dots.
+
+    Each point has x and y, and you can specify them for any desired area. Enter these two points in the format x1, x2, y1, y2 at the end of the URL after `/zone/<x1,x2,y1,y2>`. Then, receive the response in `JSON` format.
+
 
     ![Los Angeles zone](https://github.com/t7spotter/liveflights/blob/main/images/LA%20bounds.png)
+
+    In this case, each red dot represents a coordinate point (x, y), and the green box represents the specified zone of interest. You can use the x1, x2, y1, y2 values for any desired points or areas you want to track.
+
+        http://your-host/zone/33.61,34.26,-117.10,-118.63
+    
 
