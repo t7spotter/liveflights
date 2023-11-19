@@ -17,4 +17,5 @@ This small web application, built with Flask, enables users to send requests in 
    Example:
     http://your-host/zone/36.5,33.68,49.2,54.43
 
-/LA bounds.png
+    ![Los Angeles zone](https://github.com/t7spotter/liveflights/blob/main/images/LA%20bounds.png)
+
