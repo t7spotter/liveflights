@@ -123,6 +123,12 @@ def bound(zone):
     return client_response
 
 
+@app.route('/id/<id>')
+def live_info(id):
+    response = requests.get(f"https://data-live.flightradar24.com/clickhandler/?version=1.5&flight={id}")
+    response_json = response.json()
+    return response_json["trail"][0]
+
 
 @app.route('/weather/<iata>')
 def weather(iata):
