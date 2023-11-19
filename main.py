@@ -98,34 +98,9 @@ def bound(zone):
         return json_cordinate
 
     result = []
-    result_reg = []
-    info_reg = []
 
     
-    for item in list(keys_of_dict):
-        result.append([data_dict[item][8], data_dict[item][9], \
-            "From", data_dict[item][11], "To", data_dict[item][12]])
-        
-    for item_reg in result:
-        result_reg.append(item_reg[1])
-    
-    
-    for register in result_reg:
-        info_reg.append(reg(register))
-        
-    # live position info:  ################################# 
-    list_keys_of_dict = list(keys_of_dict)
-    flights_details_in_specific_bound = []
-    for id in list_keys_of_dict:
-        response = requests.get(f"https://data-live.flightradar24.com/clickhandler/?version=1.5&flight={id}")
-        response_json = response.json()
-        flights_details_in_specific_bound.append(response_json["trail"][0])
-    ########################################################
-    
-    ic(result_reg)
-    
-    result_zip = list(zip(info_reg, flights_details_in_specific_bound))
-    return result_zip
+
 
 
 
