@@ -99,7 +99,8 @@ def bound(zone):
         return json_cordinate
 
     result = []
-
+    domain = "http://localhost:5000/"  #your host domain
+    
     
 
 
