@@ -115,8 +115,9 @@ def bound(zone):
         result.append(flight_info)
     
     client_response = {
-        "Flights": result,
-        "Zone": fetch_zone()
+        "1 Zone": fetch_zone(),
+        "2 Quantity": f"{len(result)} Flights are on this zone.",
+        "3 Flights": result,
     }
     
     return client_response
