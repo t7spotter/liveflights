@@ -100,7 +100,19 @@ def bound(zone):
 
     result = []
     domain = "http://localhost:5000/"  #your host domain
-    
+    for item in list_keys_of_dict:
+
+        flight_info = {
+            'Aircraft model': data_dict[item][8],
+            'Registration': data_dict[item][9],
+            'Register info': f"{domain}reg/{data_dict[item][9]}",
+            'Origin':data_dict[item][11],
+            'Origin weather': f"{domain}weather/{data_dict[item][11]}",
+            'Destination': data_dict[item][12],
+            'Dest weather': f"{domain}weather/{data_dict[item][12]}",
+            'Live info': f"{domain}id/{item}",
+        }
+        result.append(flight_info)
     
 
 
