@@ -82,7 +82,7 @@ This information includes details about the aircraft's image, copyright, airline
 
     By entering the airport IATA code, you can retrieve the following information:
 Example:
-    'url:  http://your-host/reg/LAX`
+    'url:  http://your-host/weather/LAX`
 ```Response:
     {
   "cached": 1700409857,
