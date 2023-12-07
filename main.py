@@ -165,7 +165,10 @@ def weather(iata):
     weather = data_dict['result']['response']['airport']['pluginData']['weather']
     return weather
 
+@app.route('/')
+def hi():
+    return {'message':'hi there'}
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
