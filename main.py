@@ -128,7 +128,7 @@ def bound(zone):
         return json_cordinate
 
     result = []
-    domain = DOMAIN  # your host domain
+    domain = "http://localhost:5000/"  #your host domain
     for item in list_keys_of_dict:
         flight_info = {
             "1 Aircraft model": data_dict[item][8],
