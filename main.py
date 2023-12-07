@@ -4,6 +4,8 @@ import requests
 import http.client
 import json
 
+from domain import DOMAIN
+
 app = Flask(__name__)
 
 @app.route("/reg/<reg>")
@@ -123,7 +125,7 @@ def bound(zone):
         return json_cordinate
 
     result = []
-    domain = "http://localhost:5000/"  #your host domain
+    domain = DOMAIN  #your host domain
     for item in list_keys_of_dict:
 
         flight_info = {
