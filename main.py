@@ -169,7 +169,20 @@ def weather(iata):
     data_dict = json.loads(data)
 
     weather = data_dict["result"]["response"]["airport"]["pluginData"]["weather"]
-    return weather
+
+    clean_weather_data = {
+        "1 temp": weather["temp"],
+        "2 elevation": weather["elevation"],
+        "3 humidity": weather["humidity"],
+        "4 pressure": weather["pressure"],
+        "5 sky_status": weather["sky"]["condition"]["text"],
+        "6 visibility": weather["sky"]["visibility"],
+        "7 wind": {
+            "direction": weather["wind"]["direction"],
+            "speed": weather["wind"]["speed"],
+        },
+    }
+    return clean_weather_data
 
 
 @app.route("/")
