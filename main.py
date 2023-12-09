@@ -162,26 +162,30 @@ def live_info(id):
 
 @app.route("/weather/<iata>")
 def weather(iata):
-    response = http.client.HTTPSConnection("api.flightradar24.com")
-    response.request("GET", f"/common/v1/airport.json?code={iata}")
-    res = response.getresponse()
-    data = res.read()
-    data_dict = json.loads(data)
+    try:
+        response = http.client.HTTPSConnection("api.flightradar24.com")
+        response.request("GET", f"/common/v1/airport.json?code={iata}")
+        res = response.getresponse()
+        data = res.read()
+        data_dict = json.loads(data)
 
-    weather = data_dict["result"]["response"]["airport"]["pluginData"]["weather"]
+        weather = data_dict["result"]["response"]["airport"]["pluginData"]["weather"]
 
-    clean_weather_data = {
-        "1 temp": weather["temp"],
-        "2 elevation": weather["elevation"],
-        "3 humidity": weather["humidity"],
-        "4 pressure": weather["pressure"],
-        "5 sky_status": weather["sky"]["condition"]["text"],
-        "6 visibility": weather["sky"]["visibility"],
-        "7 wind": {
-            "direction": weather["wind"]["direction"],
-            "speed": weather["wind"]["speed"],
-        },
-    }
+        clean_weather_data = {
+            "1 temp": weather["temp"],
+            "2 elevation": weather["elevation"],
+            "3 humidity": weather["humidity"],
+            "4 pressure": weather["pressure"],
+            "5 sky_status": weather["sky"]["condition"]["text"],
+            "6 visibility": weather["sky"]["visibility"],
+            "7 wind": {
+                "direction": weather["wind"]["direction"],
+                "speed": weather["wind"]["speed"],
+            },
+        }
+    except KeyError:
+        return {"message": "Enter valid IATA code"}
+
     return clean_weather_data
 
 
