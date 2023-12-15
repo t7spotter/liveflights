@@ -9,8 +9,23 @@ from domain import DOMAIN
 app = Flask(__name__)
 
 
+# This function takes in a vehicle registration and returns the last known location and other information about the flight
 @app.route("/reg/<reg>")
 def reg(reg):
+    """
+    This function takes in a aircarft registration and returns the last known location and other information about the flight.
+
+    Parameters:
+    reg (str): The aircraft registration number
+
+    Returns:
+    A JSON object containing the following information:
+    - Image: The aircraft image
+    - Index: The index of the last known location
+    - aircraft info: Information about the aircraft, including registration, airline, model, and country
+    - flight info: Information about the last known location, including whether it is live, from and to airports, and flight number
+
+    """
     response = requests.get(
         f"https://www.jetphotos.com/api/json/lastseen.php?reg={reg}"
     )
