@@ -181,6 +181,16 @@ def bound(zone):
 
 @app.route("/id/<id>")
 def live_info(id):
+    """
+    This function takes in an id and returns the latest status of the flight with that id.
+
+    Parameters:
+    id (str): The id of the flight
+
+    Returns:
+    A JSON object containing the latest status of the flight, including its origin, destination, airline, flight number, and status.
+
+    """
     response = requests.get(
         f"https://data-live.flightradar24.com/clickhandler/?version=1.5&flight={id}"
     )
