@@ -85,52 +85,38 @@ Example:
     'url:  http://your-host/weather/LAX`
 ```Response:
     {
-  "cached": 1700409857,
-  "dewpoint": {
-    "celsius": 14,
-    "fahrenheit": 57
+  "1 temp": {
+    "celsius": 19,
+    "fahrenheit": 66
   },
-  "elevation": {
+  "2 elevation": {
     "ft": 125,
     "m": 38
   },
-  "flight": {
-    "category": null
-  },
-  "humidity": 86,
-  "metar": "KLAX 191553Z 26010KT 10SM FEW010 FEW025 17/14 A3012 RMK AO2 SLP198 T01670144",
-  "pressure": {
+  "3 humidity": 23,
+  "4 pressure": {
     "hg": 30,
-    "hpa": 1020
+    "hpa": 1024
   },
-  "qnh": 1020,
-  "sky": {
-    "condition": {
-      "text": "Cloudy"
-    },
-    "visibility": {
-      "km": 16093000,
-      "mi": 10,
-      "nmi": 9
-    }
+  "5 sky_status": "Cloudy",
+  "6 visibility": {
+    "km": 16093000,
+    "mi": 10,
+    "nmi": 9
   },
-  "temp": {
-    "celsius": 17,
-    "fahrenheit": 63
-  },
-  "time": 1700409180,
-  "wind": {
+  "7 wind": {
     "direction": {
-      "degree": 260,
-      "text": "From west"
+      "degree": 80,
+      "text": "From east"
     },
     "speed": {
-      "kmh": 18,
-      "kts": 10,
-      "mph": 11,
-      "text": "Mod"
+      "kmh": 7,
+      "kts": 4,
+      "mph": 4,
+      "text": "Calm"
     }
   }
 }
+
 ```
 
