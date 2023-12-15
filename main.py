@@ -101,6 +101,19 @@ def reg(reg):
 
 @app.route("/zone/<zone>")
 def bound(zone):
+    """
+    This function takes in a zone in the form of two coordinates (y1, y2 ,x1, x2) and returns a dictionary containing information about the flights in that zone.
+
+    Parameters:
+    zone (str): The zone in the form of two coordinates (y1, y2 ,x1, x2)
+
+    Returns:
+    A dictionary containing the following information:
+    - Zone: The zone in the form of two coordinates (y1, y2 ,x1, x2)
+    - Quantity: The number of flights in the zone
+    - Flights: A list of dictionaries, each containing information about a single flight in the zone, including its aircraft model, registration, origin, destination, and live status
+
+    """
     # Use this format in url "<zone>" for two corner of a rectangle to determine a zone: y1,y2,x1,x2
     # coordinates (y1, y2 ,x1, x2)
 
