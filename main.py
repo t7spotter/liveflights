@@ -200,6 +200,19 @@ def live_info(id):
 
 @app.route("/weather/<iata>")
 def weather(iata):
+    """
+    This function takes in an IATA code and returns the current weather at the airport.
+
+    Parameters:
+    iata (str): The IATA code of the airport
+
+    Returns:
+    A JSON object containing the current weather at the airport, including temperature, humidity, pressure, sky condition, visibility, and wind speed and direction.
+
+    Raises:
+    KeyError: If the IATA code is not valid
+
+    """
     try:
         response = http.client.HTTPSConnection("api.flightradar24.com")
         response.request("GET", f"/common/v1/airport.json?code={iata}")
